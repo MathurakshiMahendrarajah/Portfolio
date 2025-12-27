@@ -1,3 +1,4 @@
+/* Navbar container */
 .navbar {
   position: fixed;
   top: 0;
@@ -22,7 +23,8 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-decoration: none; 
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Links */
@@ -32,22 +34,18 @@
   gap: 1.5rem;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
   transition: max-height 0.3s ease;
+  flex-wrap: wrap;
 }
 
-/* Hide menu by default on mobile */
-.navbar-links.active {
-  max-height: 1000px; /* large enough to show all links */
-}
-
+/* Link styles */
 .navbar-links li a {
   text-decoration: none;
   color: #ccc;
   font-weight: 500;
   padding: 0.5rem 0.25rem;
   position: relative;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 /* Hover underline animation */
@@ -70,7 +68,7 @@
   width: 100%;
 }
 
-/* Hamburger menu button */
+/* Hamburger menu */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -81,11 +79,7 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1100; /* above menu */
-}
-
-.menu-toggle:focus {
-  outline: none;
+  z-index: 1100;
 }
 
 .bar {
@@ -96,48 +90,74 @@
   transition: all 0.3s ease;
 }
 
-/* Animate bars into an X when open */
+/* Hamburger animation */
 .bar.open:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .bar.open:nth-child(2) {
   opacity: 0;
 }
-
 .bar.open:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive */
-
+/* ===== Mobile Styles ===== */
 @media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
   }
 
   .menu-toggle {
     display: flex;
   }
 
-  /* Initially hide links on mobile */
   .navbar-links {
     flex-direction: column;
     overflow: hidden;
     max-height: 0;
     width: 100%;
     gap: 1rem;
+    margin-top: 0.5rem;
   }
 
-  /* When active, show links */
   .navbar-links.active {
-    max-height: 500px; /* enough height for all links */
+    max-height: 500px; /* enough to show all links */
   }
 
   .navbar-links li a {
-    padding: 1rem 1;
-    color: white;
+    padding: 0.75rem 0;
     font-size: 1.2rem;
+    color: #f8fafc;
+    text-align: center;
+  }
+
+  .navbar-links li a::after {
+    bottom: 5px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar-logo {
+    font-size: 1.3rem;
+  }
+
+  .navbar-links li a {
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+  }
+
+  .menu-toggle {
+    width: 22px;
+    height: 18px;
+  }
+
+  .bar {
+    height: 2.5px;
   }
 }

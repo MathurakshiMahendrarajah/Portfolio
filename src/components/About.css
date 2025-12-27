@@ -1,14 +1,14 @@
 .about {
   background-color: #111827;
-  color: #f1f5f9; 
+  color: #f1f5f9;
   padding: 60px 40px;
   box-sizing: border-box;
   width: 100%;
   transition: all 0.3s ease;
+  overflow: hidden; /* prevent accidental overflow */
 }
 
 .about.animate {
-  
   opacity: 1;
   transform: translateY(0);
 }
@@ -33,10 +33,10 @@
 }
 
 .about-image {
-  flex: 0.8;
-  min-width: 250px;
+  flex: 1 1 250px; /* allows shrinking and growing */
   display: flex;
   justify-content: center;
+  max-width: 100%;
 }
 
 .about-image img {
@@ -45,14 +45,17 @@
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid #963bb7;
-  transition: width 0.3s ease, height 0.3s ease;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  height: auto;
 }
 
 .about-description {
-  flex: 1.2;
-  min-width: 500px;
+  flex: 1 1 300px; /* allows responsive resizing */
   font-size: 1.4rem;
   line-height: 1.6;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 .about-highlights {
@@ -74,12 +77,11 @@
   left: 0;
   color: #ec4899;
 }
-/* Responsive styles */
 
 /* Tablets and smaller laptops */
 @media (max-width: 900px) {
   .about {
-    padding: 40px 40px;
+    padding: 40px 30px;
   }
 
   .about-grid {
@@ -115,6 +117,7 @@
   .about-description {
     font-size: 1.1rem;
     text-align: center;
+    min-width: unset; /* allow shrinking */
   }
 }
 
@@ -125,11 +128,12 @@
   }
 
   .about-image img {
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 190px;
   }
 
   .about-description {
     font-size: 1rem;
+    text-align: center;
   }
 }

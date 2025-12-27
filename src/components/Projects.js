@@ -110,11 +110,11 @@ const projectCategories = {
     {
       title: 'Portfolio Website',
       deployed: true,
-      live: 'https://your-live-link.com',
+      live: 'https://portfolio-chi-five-jmjryrrvgz.vercel.app',
       description: 'Personal portfolio built with React showcasing projects & skills.',
       tech: ['React', 'HTML', 'CSS', 'JavaScript'],
       image: portfolioImg,
-      github: 'https://github.com/...'
+      github: 'https://github.com/MathurakshiMahendrarajah/Portfolio.git'
     }
   ]
 };
