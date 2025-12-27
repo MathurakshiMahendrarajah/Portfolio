@@ -9,7 +9,14 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">Portfolio</div>
+      {/* Make the logo clickable */}
+      <a 
+        href="#home" 
+        className="navbar-logo" 
+        onClick={() => setMenuOpen(false)}
+      >
+        Portfolio
+      </a>
 
       {/* Hamburger menu button */}
       <button
@@ -29,8 +36,6 @@ function Navbar() {
         <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
         <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
         <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
-        <li><a href="#achievements" onClick={() => setMenuOpen(false)}>Achievements</a></li>
-        <li><a href="#blog" onClick={() => setMenuOpen(false)}>Blog</a></li>
         <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
       </ul>
     </nav>

@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import './About.css';
 import profileImage from '../assets/profile.png'; // Adjust path if needed
 
-function About() {
+function About() { 
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -29,9 +29,17 @@ function About() {
         </div>
         <div className="about-description">
           <p>
-            Passionate Computer Engineering undergraduate with a strong academic record and a deep interest in AI/ML.
-            Skilled in problem solving, software development, and building web/mobile applications.
-          </p>
+  Computer Engineering undergraduate specializing in applied AI and machine
+  learning. Experienced in building end-to-end ML pipelines—from data
+  preprocessing and model training to deployment as real-world applications.
+</p>
+<ul className="about-highlights">
+  <li>Implemented regression and classification pipelines with feature engineering and evaluation</li>
+<li>Developed CNN-based models for image understanding tasks</li>
+<li>Performed parameter-efficient LLM fine-tuning using LoRA</li>
+<li>Optimized models using validation metrics and error analysis</li>
+<li>Deployed trained models into usable web-based applications</li>
+</ul>
         </div>
       </div>
     </section>
