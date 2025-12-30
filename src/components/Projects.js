@@ -2,19 +2,28 @@
 import React, { useState } from 'react';
 import './Projects.css';
 import homePriceImg from '../assets/house_price.png';
-import clvImg from '../assets/clv.png';
+import clvImg from '../assets/clv.webp';
 import restaurantImg from '../assets/profit.png';
 import admissionImg from '../assets/admission.png';
-// import complaintNlpImg from '../assets/complaint_nlp.png';
-import complaintImg from '../assets/Customer_complaint.png';
+import complaintImg from '../assets/Customer-complaint.jpg';
 import sentimentImg from '../assets/movieAnalysis.png';
 import pneumoniaImg from '../assets/Pneumonia.png';
 import cookifyImg from '../assets/Cookify.png.webp';
 import dustbinImg from '../assets/dustbin.avif';
 import portfolioImg from '../assets/portfolio.png';
+import fraudImg from '../assets/fraud.png';
 
 const projectCategories = {
   'Machine Learning (Structured Data)': [
+    {
+      title: 'Credit Card Fraud Detection',
+      deployed: true,
+      live: 'https://creditcardfrauddetection-83scm92ncfwceyuzvl2dk6.streamlit.app', 
+      description: 'Detects fraudulent credit card transactions using an end-to-end ML pipeline with XGBoost, handling class imbalance, feature engineering, and real-time predictions via Streamlit.',
+      tech: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'XGBoost', 'Streamlit', 'Git'],
+      image: fraudImg, 
+      github: 'https://github.com/MathurakshiMahendrarajah/Credit_Card_Fraud_Detection.git'
+    },
     {
       title: 'Customer Lifetime Value Prediction (CLV)',
       deployed: true,
@@ -51,15 +60,7 @@ const projectCategories = {
     }
   ],
   'NLP Systems': [
-    {
-      title: 'Complaint Understanding – NLP (SLM + LoRA)',
-      deployed: true,
-      live: 'https://huggingface.co/spaces/MathurakshiM/Complaint_Understanding', 
-      description: 'Classifies customer complaints with DistilBERT/MiniLM fine-tuned using LoRA; deployed as a Streamlit app.',
-      tech: ['Python', 'PyTorch', 'Hugging Face Transformers', 'LoRA', 'Streamlit'],
-      image: complaintImg,
-      github: 'https://github.com/MathurakshiMahendrarajah/Complaint-Understanding.git'
-    },
+    
     {
       title: 'Customer Complaint Intelligence System',
       deployed: true,

@@ -117,8 +117,9 @@
     overflow: hidden;
     max-height: 0;
     width: 100%;
-    gap: 1rem;
+    gap: 1.5rem; /* increased gap between links */
     margin-top: 0.5rem;
+    padding-bottom: 0.5rem; /* extra padding at the bottom */
   }
 
   .navbar-links.active {
@@ -126,14 +127,14 @@
   }
 
   .navbar-links li a {
-    padding: 0.75rem 0;
-    font-size: 1.2rem;
+    padding: 0.8rem 0; /* more padding top/bottom */
+    font-size: 1.25rem; /* slightly larger for readability */
     color: #f8fafc;
     text-align: center;
   }
 
   .navbar-links li a::after {
-    bottom: 5px;
+    bottom: 6px; /* adjust underline position */
   }
 }
 
@@ -148,8 +149,8 @@
   }
 
   .navbar-links li a {
-    font-size: 1.1rem;
-    padding: 0.6rem 0;
+    font-size: 1.15rem;
+    padding: 0.7rem 0; /* slightly more spacing */
   }
 
   .menu-toggle {
@@ -159,5 +160,10 @@
 
   .bar {
     height: 2.5px;
+  }
+
+  .navbar-links {
+    gap: 1.2rem; /* maintain readable spacing on very small screens */
+    padding-bottom: 0.4rem;
   }
 }
