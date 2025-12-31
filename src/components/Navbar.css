@@ -101,6 +101,10 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+.navbar {
+  height: 72px; /* lock navbar height */
+}
+/* ===== Mobile Styles ===== */
 /* ===== Mobile Styles ===== */
 @media (max-width: 768px) {
   .navbar {
@@ -113,32 +117,45 @@
   }
 
   .navbar-links {
+    position: absolute;
+    top: 72px;                 /* EXACT navbar height */
+    left: 0;
+    width: 100%;
+
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;   /* left align menu items */
+    background-color: #0f172a;
+    border-top: 1px solid #1e293b;
+
     overflow: hidden;
     max-height: 0;
-    width: 100%;
-    gap: 1.5rem; /* increased gap between links */
-    margin-top: 0.5rem;
-    padding-bottom: 0.5rem; /* extra padding at the bottom */
+    gap: 0.9rem;               /* smaller vertical spacing */
+    padding: 0;                /* hidden state */
+    box-sizing: border-box;
+    transition: max-height 0.35s ease, padding 0.35s ease;
   }
 
   .navbar-links.active {
-    max-height: 500px; /* enough to show all links */
+    max-height: 1000px;
+    padding: 1rem 0 1rem 1.5rem; /* top, right, bottom, left padding */
   }
 
   .navbar-links li a {
-    padding: 0.8rem 0; /* more padding top/bottom */
-    font-size: 1.25rem; /* slightly larger for readability */
+    white-space: nowrap;      /* prevent words from breaking mid-word */
+    text-align: left;         /* left text alignment */
+    padding: 0.6rem 0;
+    font-size: 1.2rem;
     color: #f8fafc;
-    text-align: center;
   }
 
   .navbar-links li a::after {
-    bottom: 6px; /* adjust underline position */
+    bottom: 4px;
   }
 }
 
-/* Extra small devices */
+/* ===== Extra Small Devices ===== */
+/* ===== Extra Small Devices ===== */
 @media (max-width: 480px) {
   .navbar {
     padding: 0.8rem 1rem;
@@ -146,11 +163,6 @@
 
   .navbar-logo {
     font-size: 1.3rem;
-  }
-
-  .navbar-links li a {
-    font-size: 1.15rem;
-    padding: 0.7rem 0; /* slightly more spacing */
   }
 
   .menu-toggle {
@@ -163,7 +175,41 @@
   }
 
   .navbar-links {
-    gap: 1.2rem; /* maintain readable spacing on very small screens */
-    padding-bottom: 0.4rem;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;             /* make menu container full width */
+    display: flex;
+    flex-direction: column;  /* stack items vertically */
+    align-items: flex-start; /* left align menu items */
+    background-color: #0f172a;
+    border-top: 1px solid #1e293b;
+    overflow: hidden;
+    max-height: 0;
+    gap: 0.8rem;
+    padding: 0;
+    box-sizing: border-box;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+
+  .navbar-links.active {
+    max-height: 1000px;
+    padding: 1rem 0 1rem 1rem; /* top, right, bottom, left padding */
+  }
+
+  .navbar-links li {
+    width: 100%;               /* ensure each item takes full width */
+  }
+
+  .navbar-links li a {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;      /* padding inside full-width items */
+    text-align: left;          /* left align text */
+    white-space: normal;       /* allow wrapping if needed */
+    display: block;            /* force each link to be block-level */
+  }
+
+  .navbar-links li a::after {
+    bottom: 4px;
   }
 }

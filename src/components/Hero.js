@@ -23,7 +23,7 @@ function Hero() {
 
         <div className="hero-buttons">
           <button className="btn-primary" onClick={scrollToProjects}>View My Projects</button>
-          <a className="btn-outline" href="/Mathurakshi Mahendrarajah.pdf" target="_blank" rel="noopener noreferrer" download>
+          <a className="btn-outline" href="/Mathurakshi_Mahendrarajah.pdf" target="_blank" rel="noopener noreferrer" download>
   Download CV
 </a>
 
