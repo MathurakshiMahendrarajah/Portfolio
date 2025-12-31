@@ -13,12 +13,12 @@ function Hero() {
       <div className="hero-content">
         <h1 className="intro-text">Hi, I'm <span className="gradient-text">Mathurakshi Mahendrarajah</span></h1>
         <p className="hero-subtitle">
-  Designing end-to-end machine learning pipelines from data preprocessing to deployment
-</p>
+          Building software solutions and AI-powered applications, from backend systems to deployable models
+        </p>
         <div className="animated-titles">
-          <span>AI / ML Engineer — Internship Focus</span>
-          <span>Buit &amp; Deployed ML Models</span>
-          <span>Data -&gt; Model -&gt; Deployment</span>
+          <span>AI / ML & Software Developer</span>
+          <span>Full-Stack & ML Projects</span>
+          <span>Data → Model → Deployment → Application</span>
         </div>
 
         <div className="hero-buttons">

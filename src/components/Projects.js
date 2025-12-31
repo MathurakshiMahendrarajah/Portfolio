@@ -12,9 +12,28 @@ import cookifyImg from '../assets/Cookify.png.webp';
 import dustbinImg from '../assets/dustbin.avif';
 import portfolioImg from '../assets/portfolio.png';
 import fraudImg from '../assets/fraud.png';
+import legalDocImg from '../assets/legal_doc.jpg'; // create or use a placeholder
+import medicalTextImg from '../assets/medical_text.jpg'; // create or use a placeholder
+import apiAccessImg from '../assets/api-access.webp'; // create or use a placeholder
 
 const projectCategories = {
-  'Machine Learning (Structured Data)': [
+  'Machine Learning & AI': [
+    {
+      title: 'AI-Powered Legal Document Analyzer',
+      deployed: false,
+      description: 'Streamlit app summarizes and answers queries on legal documents using RAG with citation-aware answers. Implements PDF ingestion, semantic chunking, FAISS vector retrieval, and LangChain integration.',
+      tech: ['Python', 'Streamlit', 'LangChain', 'FAISS', 'OpenAI', 'PyPDF2'],
+      image: legalDocImg,
+      github: 'https://github.com/MathurakshiMahendrarajah/Legal_Document_Analyzer.git'
+    },
+    {
+      title: 'Domain-Specific Medical Text Summarization',
+      deployed: false,
+      description: 'Fine-tuned T5 transformer with LoRA for medical research papers summarization; Streamlit app provides concise domain-specific summaries.',
+      tech: ['Python', 'Hugging Face Transformers', 'LoRA', 'PyTorch', 'Streamlit'],
+      image: medicalTextImg,
+      github: 'https://github.com/MathurakshiMahendrarajah/Medical_Text_Summarization.git'
+    },
     {
       title: 'Credit Card Fraud Detection',
       deployed: true,
@@ -57,10 +76,7 @@ const projectCategories = {
       tech: ['Python', 'Flask', 'Bootstrap', 'Logistic Regression'],
       image: admissionImg,
       github: 'https://github.com/MathurakshiMahendrarajah/University-Admission-Predictor.git'
-    }
-  ],
-  'NLP Systems': [
-    
+    },
     {
       title: 'Customer Complaint Intelligence System',
       deployed: true,
@@ -78,9 +94,7 @@ const projectCategories = {
       tech: ['Python', 'Flask', 'Scikit-Learn', 'HTML', 'CSS', 'JavaScript'],
       image: sentimentImg,
       github: 'https://github.com/MathurakshiMahendrarajah/Movie_Review_Sentiment_Analysis.git'
-    }
-  ],
-  'Computer Vision': [
+    },
     {
       title: 'Pneumonia Detection from Chest X-rays',
       deployed: true,
@@ -116,12 +130,20 @@ const projectCategories = {
       tech: ['React', 'HTML', 'CSS', 'JavaScript'],
       image: portfolioImg,
       github: 'https://github.com/MathurakshiMahendrarajah/Portfolio.git'
+    },
+    {
+      title: 'Policy-Driven API Access Management System',
+      deployed: false,
+      description: 'Backend system managing API access with policy rules, JWT authentication, rate limiting, and usage logging; REST APIs built with Spring Boot & MySQL.',
+      tech: ['Java', 'Spring Boot', 'REST APIs', 'JWT', 'MySQL'],
+      image: apiAccessImg,
+      github: 'https://github.com/MathurakshiMahendrarajah/Policy-Driven-API-Access-Management-System.git'
     }
-  ]
+  ],
 };
 
 function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState('Machine Learning (Structured Data)');
+  const [selectedCategory, setSelectedCategory] = useState('Machine Learning & AI');
 
   return (
     <section className="projects" id="projects">

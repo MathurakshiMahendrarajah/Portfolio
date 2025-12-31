@@ -29,17 +29,15 @@ function About() {
         </div>
         <div className="about-description">
           <p>
-  Computer Engineering undergraduate specializing in applied AI and machine
-  learning. Experienced in building end-to-end ML pipelines—from data
-  preprocessing and model training to deployment as real-world applications.
-</p>
-<ul className="about-highlights">
-  <li>Implemented regression and classification pipelines with feature engineering and evaluation</li>
-<li>Developed CNN-based models for image understanding tasks</li>
-<li>Performed parameter-efficient LLM fine-tuning using LoRA</li>
-<li>Optimized models using validation metrics and error analysis</li>
-<li>Deployed trained models into usable web-based applications</li>
-</ul>
+          I am a 3rd-year Computer Engineering undergraduate with experience in software development and AI/ML applications. I design and build end-to-end systems, including web, mobile, and AI-powered solutions, while continuously learning and exploring new technologies.
+          </p>
+          <ul className="about-highlights">
+            <li>Built AI-powered applications and software solutions from concept to deployment</li>
+            <li>Developed web and mobile applications integrating backend systems and databases</li>
+            <li>Worked with data pipelines, model integration, and interactive interfaces</li>
+            <li>Focused on scalable, maintainable, and user-friendly solutions</li>
+            <li>Committed to continuous learning and adopting emerging technologies</li>
+          </ul>
         </div>
       </div>
     </section>
